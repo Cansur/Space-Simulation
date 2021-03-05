@@ -22,6 +22,8 @@ public class TextM : MonoBehaviour
         db.Money += 1;
         verCount = StartCoroutine(Count((float)(db.Money + db.Per1sec), (float)db.Money));
         textMoney.text = string.Format("{0:#,###}", db.Money);
+        float var5 = 5555555555f;
+        Debug.Log(var5);
         //Parsing();
     } 
     void Update()
