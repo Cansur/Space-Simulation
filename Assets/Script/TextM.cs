@@ -26,7 +26,10 @@ public class TextM : MonoBehaviour
     } 
     void Update()
     {
-        if(db.Per1sec != 0) { textPerSec.text = string.Format("{0:#,###}"+"<color=#C3C1BD>"+ "/sec" + "</color>", db.TotalPerSec); }
+        if(db.Per1sec != 0) 
+        { 
+            textPerSec.text = string.Format("{0:#,###}"+"<color=#C3C1BD>"+ "/sec" + "</color>", db.TotalPerSec);
+        }
         else { textPerSec.text = "0" + "<color=#C3C1BD>"+ "/sec" + "</color>";}
 
         /* if(db.Per1sec != 0 && starting)
@@ -36,6 +39,7 @@ public class TextM : MonoBehaviour
         }
         else { moneyText.text = "0";} */
         //if(Input.GetKeyDown(KeyCode.R)) { Parsing(); }
+        //if( isPerSec0 == true && db.Per1sec != 0) { StopAllCoroutines(); isPerSec0 = false; verCount = StartCoroutine(Count((float)(db.Money + (int)(db.TotalPerSec*0.5)), (float)db.Money)); }
         if( isPerSec0 == true && db.Per1sec != 0) { StopAllCoroutines(); isPerSec0 = false; verCount = StartCoroutine(Count((float)(db.Money + db.TotalPerSec), (float)db.Money)); }
         //if(db.Money == 0) { moneyText.text = "0"; }
     }
@@ -44,18 +48,19 @@ public class TextM : MonoBehaviour
     {
         if(db.Per1sec == 0) { isPerSec0 = true; yield break; }
         //int sumAB = db.Money + db.TotalPerSec;
-        float duration = 1f; // 카운팅에 걸리는 시간 설정. 
+        float duration = 0.5f; // 카운팅에 걸리는 시간 설정.
+        //if(db.TotalPerSec < 6) { duration = 1f; }
         float offset = (target - current) / duration; //
         while (current < target)
         {
             current += offset * Time.deltaTime;
-            //text1.text = ((int)current).ToString();
-            //db.Money = (int)current;
-            textMoney.text = string.Format("{0:#,###}", (int)current);
+            textMoney.text = string.Format("{0:#,###}", (int)(current));
             if(db.Money == 0) { textMoney.text = "0"; }
+            //if(var > db)
             yield return null;
         }
         current = target;
+        //Debug.Log(db.TotalPerSec);
         db.Money += db.TotalPerSec;
         StartCoroutine(Count((int)(db.Money + db.TotalPerSec), (int)db.Money));
     }

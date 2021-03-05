@@ -12,7 +12,15 @@ using UnityEngine.UI;
     public int Per1sec { get { return per1sec; } set { per1sec = value; } }
     [SerializeField] int totalPerSec;
     public int TotalPerSec { get { return totalPerSec; } set { totalPerSec = value; } }
-    public void SumTotalPerSec() { TotalPerSec = Per1sec; }
+    public void SumTotalPerSec() 
+    { 
+        int var = CountProduceAether(1);
+        TotalPerSec = (Per1sec * PerProduceAether(1, var));
+        //if
+        //int var = CountProduceAether(1);
+        //TotalPerSec = (Per1sec * PerProduceAether(1, var));
+        //TotalPerSec = Per1sec;
+    }
 
     #region 에테르 채집
 
@@ -21,6 +29,7 @@ using UnityEngine.UI;
     public bool IsProduceAether(int var) {return isProduceAether[var];}
     public GameObject[] goProduceAether = new GameObject[4];
 
+    public Text[] textCountProduceAether = new Text[4];
     public Text[] textNeedMoneyBuyProduceAether = new Text[4];
     public GameObject[] goProduceAetherButton = new GameObject[4];
     [SerializeField] int[] countProduceAether = new int[4];
