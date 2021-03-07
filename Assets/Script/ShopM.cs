@@ -1,4 +1,4 @@
-Ôªøusing System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,15 +17,16 @@ public class ShopM : MonoBehaviour
         //TextNeedMoneyBuyProduceAetherUpdate();
     }
 
-    public void OnCilck1(int var) // Ï†ú 2ÏóêÌÖåÎ•¥ ÏÉùÏÇ∞ÏÜå : var = 1
+    public void OnCilck1(int var) // ¡¶ 2ø°≈◊∏£ ª˝ªÍº“ : var = 1
     {
-        int var1 = db.CountProduceAether(var); // var = 1 Ïù¥Î©¥ var1 ÏùÄ 0
+        int var1 = db.CountProduceAether(var); // var = 1 ¿Ã∏È var1 ¿∫ 0
         if(db.NeedMoneyBuyProduceAether(var, var1) <= db.Money)
+
         {
-            //if(var == 1){Debug.Log("ÏïºÌò∏");}
+            //if(var == 1){Debug.Log("æﬂ»£");}
             db.Money -= db.NeedMoneyBuyProduceAether(var, var1);
-            db.CountProduceAether(var, db.CountProduceAether(var)+1); // 1, 1
-            db.Per1sec += db.PerProduceAether(var, var1);
+            db.CountProduceAether(var, db.CountProduceAether(var)+1); 
+            db.Per1sec += db.PerProduceAether(var, var1); // ¥ı«œ±‚
             db.SumTotalPerSec();
             TextNeedMoneyBuyProduceAetherUpdate(var, var1);
             DownColorProduceAether(var);
@@ -34,7 +35,7 @@ public class ShopM : MonoBehaviour
     } 
     public void Oncilck2(int var)
     {
-        int var1 = db.CountProduceAether(var); // var = 1 Ïù¥Î©¥ var1 ÏùÄ 0
+        int var1 = db.CountProduceAether(var); // var = 1 ¿Ã∏È var1 ¿∫ 0
         if(db.NeedMoneyBuyProduceAether(var, var1) <= db.Money)
         {
             db.Money -= db.NeedMoneyBuyProduceAether(var, var1);
@@ -53,7 +54,7 @@ public class ShopM : MonoBehaviour
 
     void UpColorProduceAether()
     {
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 3; i++)
         {
             if(db.Money >= db.NeedMoneyBuyProduceAether(i, db.CountProduceAether(i))) 
             {
@@ -86,27 +87,40 @@ public class ShopM : MonoBehaviour
             colorProduceAetherButton[i] = db.goProduceAetherButton[i].GetComponent<Image>();
         }
         //colorProduceAetherButton[0].color = new Color(231/255f, 115/255f, 103/255f);
-        //colorProduceAetherButton[0] = new Color(1, 1, 1); 
-        
-        db.NeedMoneyBuyProduceAether(0, 0, 1);
-        db.NeedMoneyBuyProduceAether(0, 1, 10);
-        db.NeedMoneyBuyProduceAether(0, 2, 50);
-        db.NeedMoneyBuyProduceAether(0, 3, 100);
-        db.NeedMoneyBuyProduceAether(0, 4, 500);
-        db.NeedMoneyBuyProduceAether(0, 5, 1000);
-        db.NeedMoneyBuyProduceAether(1, 0, 20);
-        db.NeedMoneyBuyProduceAether(1, 1, 10000);
-        db.PerProduceAether(0, 0, 1); // ÎçîÌïòÍ∏∞
-        db.PerProduceAether(0, 1, 1);
-        db.PerProduceAether(0, 2, 1);
-        db.PerProduceAether(0, 3, 1);
-        db.PerProduceAether(0, 4, 1);
-        db.PerProduceAether(0, 5, 1);
-        db.PerProduceAether(1, 0, 1); // Í≥±ÌïòÍ∏∞
+        //colorProduceAetherButton[0] = new Color(1, 1, 1);
+        db.NeedMoneyBuyProduceAether(0, 0, 100);
+        db.NeedMoneyBuyProduceAether(0, 1, 200);
+        db.NeedMoneyBuyProduceAether(0, 2, 300);
+        db.NeedMoneyBuyProduceAether(0, 3, 500);
+        db.NeedMoneyBuyProduceAether(0, 4, 600);
+        db.NeedMoneyBuyProduceAether(0, 5, 700);
+        db.NeedMoneyBuyProduceAether(0, 6, 800);
+        db.NeedMoneyBuyProduceAether(0, 7, 100000000);
+        db.NeedMoneyBuyProduceAether(1, 0, 200);
+        db.NeedMoneyBuyProduceAether(1, 1, 300);
+        db.NeedMoneyBuyProduceAether(1, 2, 400);
+        db.NeedMoneyBuyProduceAether(1, 3, 100000000);
+        db.NeedMoneyBuyProduceAether(2, 0, 1000);
+        db.NeedMoneyBuyProduceAether(2, 1, 10000);
+        db.NeedMoneyBuyProduceAether(2, 1, 100000000);
+        db.PerProduceAether(0, 0, 10); // ¥ı«œ±‚
+        db.PerProduceAether(0, 1, 10);
+        db.PerProduceAether(0, 2, 10);
+        db.PerProduceAether(0, 3, 10);
+        db.PerProduceAether(0, 4, 10);
+        db.PerProduceAether(0, 5, 10);
+        db.PerProduceAether(0, 6, 10);
+        db.PerProduceAether(0, 7, 10);
+        db.PerProduceAether(1, 0, 1); // ∞ˆ«œ±‚
         db.PerProduceAether(1, 1, 2);
+        db.PerProduceAether(1, 2, 4);
+        db.PerProduceAether(1, 3, 8);
+        db.PerProduceAether(2, 0, 1);
+        db.PerProduceAether(2, 1, 2);
+        db.PerProduceAether(2, 2, 4);
         TextNeedMoneyBuyProduceAetherUpdate();
     }
-    // Î¨∏Ï†ú ÏûàÍ≥†
+    // πÆ¡¶ ¿÷∞Ì
     void TextNeedMoneyBuyProduceAetherUpdate(int var, int var1) 
     { 
         //db.textNeedMoneyBuyProduceAether[var].text = db.NeedMoneyBuyProduceAether(var, var1+1).ToString(); 
@@ -114,7 +128,7 @@ public class ShopM : MonoBehaviour
     }
     void TextNeedMoneyBuyProduceAetherUpdate()
     {
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 3; i++)
         {
             int var = db.CountProduceAether(i);
             //db.textNeedMoneyBuyProduceAether[i].text = db.NeedMoneyBuyProduceAether(i, var).ToString();
@@ -127,7 +141,7 @@ public class ShopM : MonoBehaviour
     }
     void DownTextCountProduceAether()
     {
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 3; i++)
         {
             if(db.CountProduceAether(i) == 0) { db.textCountProduceAether[i].text = ""; }
             else { db.textCountProduceAether[i].text = string.Format("("+"{0:#,###}"+")", db.CountProduceAether(i)); }

@@ -1,13 +1,15 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AnimationM
     - CameraResolution
     - DB
+    - SceneMove
     - ShopM
+    - TestA
     - TestB
     - TextM
     - UnlockM
-    - VectorM
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -45,7 +47,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Main.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -75,35 +77,86 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11468}
+      Script: {instanceID: 11330}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11470}
     - Class: 114
-      Script: {instanceID: 11522}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 11694}
+      Script: {instanceID: 11524}
     - Class: 114
-      Script: {instanceID: 12012}
+      Script: {instanceID: 11696}
     - Class: 114
-      Script: {instanceID: 12100}
+      Script: {instanceID: 12014}
     - Class: 114
-      Script: {instanceID: 12186}
+      Script: {instanceID: 12102}
     - Class: 114
-      Script: {instanceID: 12536}
+      Script: {instanceID: 12188}
     - Class: 114
-      Script: {instanceID: 12574}
+      Script: {instanceID: 12538}
     - Class: 114
-      Script: {instanceID: 12892}
+      Script: {instanceID: 12576}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 12894}
     - Class: 114
-      Script: {instanceID: 13036}
+      Script: {instanceID: 12910}
     - Class: 114
-      Script: {instanceID: 13640}
+      Script: {instanceID: 13038}
     - Class: 114
       Script: {instanceID: 13656}
     - Class: 114
       Script: {instanceID: 13910}
+    - Class: 114
+      Script: {instanceID: 14268}
+    - Class: 114
+      Script: {instanceID: 49914}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Test.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11170}
+    - Class: 114
+      Script: {instanceID: 11274}
+    - Class: 114
+      Script: {instanceID: 11470}
+    - Class: 114
+      Script: {instanceID: 11524}
+    - Class: 114
+      Script: {instanceID: 12188}
+    - Class: 114
+      Script: {instanceID: 12894}
+    - Class: 114
+      Script: {instanceID: 13656}
     - Class: 114
       Script: {instanceID: 14268}
     - Class: 115
@@ -159,6 +212,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShopM
+  - hash:
+      serializedVersion: 2
+      Hash: 9d00ca87428ff30bbb76a83074acfafd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TestA
+  - hash:
+      serializedVersion: 2
+      Hash: 6603212a03d5d7af11d21184bfeb49f6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AnimationM
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -329,7 +394,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 123c0683155f078774010041d53d1150
+      Hash: 9c5fe2cbee6e9b02a96fdfd25703412b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DB
@@ -521,12 +586,6 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: 6603212a03d5d7af11d21184bfeb49f6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VectorM
-  - hash:
-      serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -651,7 +710,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneMove
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/USER/Documents/GitHub/Space simulation/Bata 0.5.apk
+  - Assets/Scenes/Main.unity
+  - Assets/Scenes/Test.unity
+  playerPath: C:/Users/USER/Documents/GitHub/Space simulation/Bata 0.6.apk

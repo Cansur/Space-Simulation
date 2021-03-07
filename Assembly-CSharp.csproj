@@ -36,15 +36,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\AnimationM.cs" />
      <Compile Include="Assets\Script\CameraResolution.cs" />
      <Compile Include="Assets\Script\DataBase\DB.cs" />
      <Compile Include="Assets\Script\ShopM.cs" />
-     <Compile Include="Assets\Script\TestA.cs" />
+     <Compile Include="Assets\Script\Test\SceneMove.cs" />
+     <Compile Include="Assets\Script\Test\TestA.cs" />
      <Compile Include="Assets\Script\TestB.cs" />
      <Compile Include="Assets\Script\TextM.cs" />
      <Compile Include="Assets\Script\UIM.cs" />
      <Compile Include="Assets\Script\UnlockM.cs" />
-     <Compile Include="Assets\Script\VectorM.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

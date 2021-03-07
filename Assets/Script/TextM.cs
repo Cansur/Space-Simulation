@@ -8,23 +8,17 @@ public class TextM : MonoBehaviour
     DB db;
     public Text textMoney;
     public Text textPerSec;
-    //bool starting = true;
-    bool isPerSec0 = false;
-    //int fakeMoney;
-    Coroutine verCount;
+    //bool isPerSec0 = false;
+    //Coroutine verCount;
+    Coroutine verCoroutiune;
+
+    //float timer;
     void Start()
     {
-        //verCount = StartCoroutine(Count((float)(money + per1sec), (float)money));
-        //StartCoroutine(Count((float)(money + per1sec), (float)money));
-        //perSec.text = string.Format(per1sec.ToString() +"<color=#C3C1BD>"+ "/sec" + "</color>");
-        //perSec.text = string.Format("{0:#,###}", per1sec.ToString());
         db = GameObject.FindWithTag("DataBase").GetComponent<DB>();
-        db.Money += 1;
-        verCount = StartCoroutine(Count((float)(db.Money + db.Per1sec), (float)db.Money));
-        textMoney.text = string.Format("{0:#,###}", db.Money);
-        float var5 = 5555555555f;
-        Debug.Log(var5);
-        //Parsing();
+        db.Money = 100;
+        //verCount = StartCoroutine(Count((float)(db.Money + db.Per1sec), (float)db.Money));
+        StartCoroutine(CountA(db.Money+db.TotalPerSec, db.Money));
     } 
     void Update()
     {
@@ -33,20 +27,12 @@ public class TextM : MonoBehaviour
             textPerSec.text = string.Format("{0:#,###}"+"<color=#C3C1BD>"+ "/sec" + "</color>", db.TotalPerSec);
         }
         else { textPerSec.text = "0" + "<color=#C3C1BD>"+ "/sec" + "</color>";}
-
-        /* if(db.Per1sec != 0 && starting)
-        {
-            verCount = StartCoroutine(Count((float)(db.Money + db.Per1sec), (float)db.Money));
-            starting = false;
-        }
-        else { moneyText.text = "0";} */
-        //if(Input.GetKeyDown(KeyCode.R)) { Parsing(); }
-        //if( isPerSec0 == true && db.Per1sec != 0) { StopAllCoroutines(); isPerSec0 = false; verCount = StartCoroutine(Count((float)(db.Money + (int)(db.TotalPerSec*0.5)), (float)db.Money)); }
-        if( isPerSec0 == true && db.Per1sec != 0) { StopAllCoroutines(); isPerSec0 = false; verCount = StartCoroutine(Count((float)(db.Money + db.TotalPerSec), (float)db.Money)); }
-        //if(db.Money == 0) { moneyText.text = "0"; }
+        //if(db.Money == 0) { textMoney.text = "0"; }
+        //if( isPerSec0 == true && db.Per1sec != 0) { StopAllCoroutines(); isPerSec0 = false; verCount = StartCoroutine(Count((float)(db.Money + db.TotalPerSec), (float)db.Money)); }
+        //timer += Time.deltaTime;
     }
 
-    IEnumerator Count(float target, float current)
+    /* IEnumerator Count(float target, float current)
     {
         if(db.Per1sec == 0) { isPerSec0 = true; yield break; }
         //int sumAB = db.Money + db.TotalPerSec;
@@ -65,11 +51,46 @@ public class TextM : MonoBehaviour
         //Debug.Log(db.TotalPerSec);
         db.Money += db.TotalPerSec;
         StartCoroutine(Count((int)(db.Money + db.TotalPerSec), (int)db.Money));
+    } */
+    IEnumerator CountA(long target, long current)
+    {
+        if(target == current) 
+        {
+            textMoney.text = string.Format("{0:#,###}", db.Money);
+            yield return new WaitForSeconds(0.1f);
+            StartCoroutine(CountA(db.Money+db.TotalPerSec, db.Money));
+            //Debug.Log(timer + "리셋");
+            //timer = 0;
+        }
+        else
+        {
+            long var = (target - current) / 10;
+            for (int i = 0; i < 10; i++)
+            {
+                current += var;
+                db.Money += var;
+                textMoney.text = string.Format("{0:#,###}", db.Money);
+                yield return new WaitForSeconds(0.08f);
+            }
+            current = target;
+            //if(db.Money != target) { Debug.Log("어,, 다르네");}
+            StartCoroutine(CountA(db.Money+db.TotalPerSec, db.Money));
+            /* long var = (target - current) / 100; // totalpersec 1000 이상
+            for (int i = 0; i < 100; i++)
+            {
+                current += var;
+                db.Money += var;
+                textMoney.text = string.Format("{0:#,###}", db.Money);
+                yield return new WaitForSeconds(0.0001f);
+            } */
+            //Debug.Log(timer + "리셋");
+            //timer = 0;
+            
+        }
     }
 
-    void Parsing()
+    void Restart()
     {
-        //money = db.Money;
-        //per1sec = db.Per1sec;
+        //StartCoroutine(verCoroutiune);
     }
 }
