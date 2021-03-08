@@ -121,6 +121,49 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &6064139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6064141}
+  - component: {fileID: 6064140}
+  m_Layer: 0
+  m_Name: Spreadsheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &6064140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57abdbdabe2126049ac338fb283c32e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &6064141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.15921095, y: 1.099239, z: -27.607178}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &62177742
 GameObject:
   m_ObjectHideFlags: 0
@@ -2071,7 +2114,7 @@ GameObject:
   - component: {fileID: 561917205}
   - component: {fileID: 561917204}
   m_Layer: 5
-  m_Name: Effect
+  m_Name: Effect3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3788,6 +3831,11 @@ MonoBehaviour:
   - {fileID: 960837281}
   - {fileID: 567669217}
   - {fileID: 2096229064}
+  textEffectProduceAether:
+  - {fileID: 1859768251}
+  - {fileID: 1964652362}
+  - {fileID: 561917204}
+  - {fileID: 2096606126}
   textNeedMoneyBuyProduceAether:
   - {fileID: 1375036500}
   - {fileID: 848336667}
@@ -7940,7 +7988,7 @@ GameObject:
   - component: {fileID: 1859768252}
   - component: {fileID: 1859768251}
   m_Layer: 5
-  m_Name: Effect
+  m_Name: Effect1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8557,7 +8605,7 @@ GameObject:
   - component: {fileID: 1964652363}
   - component: {fileID: 1964652362}
   m_Layer: 5
-  m_Name: Effect
+  m_Name: Effect2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9366,7 +9414,7 @@ GameObject:
   - component: {fileID: 2096606127}
   - component: {fileID: 2096606126}
   m_Layer: 5
-  m_Name: Effect
+  m_Name: Effect4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9423,7 +9471,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3.14x
+  m_Text: "\uC81C 3\uC5D0\uD14C\uB974 \uC0DD\uC0B0\uC18C x 2"
 --- !u!222 &2096606127
 CanvasRenderer:
   m_ObjectHideFlags: 0

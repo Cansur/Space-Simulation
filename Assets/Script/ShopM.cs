@@ -12,10 +12,18 @@ public class ShopM : MonoBehaviour
     {
         db = GameObject.FindWithTag("DataBase").GetComponent<DB>();
         TestD();
-        UpColorProduceAether();
-        DownTextCountProduceAether();
+        //StartDownTextAether();
+        //UpColorProduceAether();
+        //DownTextCountProduceAether();
         //TextNeedMoneyBuyProduceAetherUpdate();
     }
+
+    void Update()
+    {
+        UpColorProduceAether();
+    }
+
+    #region 에테르채집상점
 
     public void OnCilck1(int var) // 제 2에테르 생산소 : var = 1
     {
@@ -29,6 +37,7 @@ public class ShopM : MonoBehaviour
             db.Per1sec += db.PerProduceAether(var, var1); // 더하기
             db.SumTotalPerSec();
             TextNeedMoneyBuyProduceAetherUpdate(var, var1);
+            DownTextEffectProduceAether(var);
             DownColorProduceAether(var);
             DownTextCountProduceAether(var);
         }
@@ -42,15 +51,13 @@ public class ShopM : MonoBehaviour
             db.CountProduceAether(var, db.CountProduceAether(var)+1); // 1, 1
             
             db.SumTotalPerSec();
+            DownTextEffectProduceAether(var);
             TextNeedMoneyBuyProduceAetherUpdate(var, var1);
             DownColorProduceAether(var);
             DownTextCountProduceAether(var);
         }
     }
-    void Update()
-    {
-        UpColorProduceAether();
-    }
+   
 
     void UpColorProduceAether()
     {
@@ -113,20 +120,21 @@ public class ShopM : MonoBehaviour
         db.PerProduceAether(0, 7, 10);
         db.PerProduceAether(1, 0, 1); // 곱하기
         db.PerProduceAether(1, 1, 2);
-        db.PerProduceAether(1, 2, 4);
-        db.PerProduceAether(1, 3, 8);
+        db.PerProduceAether(1, 2, 3);
+        db.PerProduceAether(1, 3, 4);
+        db.PerProduceAether(1, 4, 5);
         db.PerProduceAether(2, 0, 1);
         db.PerProduceAether(2, 1, 2);
-        db.PerProduceAether(2, 2, 4);
-        TextNeedMoneyBuyProduceAetherUpdate();
+        db.PerProduceAether(2, 2, 3);
+        StartDownTextAether();
+        //TextNeedMoneyBuyProduceAetherUpdate();
     }
     // 문제 있고
     void TextNeedMoneyBuyProduceAetherUpdate(int var, int var1) 
     { 
-        //db.textNeedMoneyBuyProduceAether[var].text = db.NeedMoneyBuyProduceAether(var, var1+1).ToString(); 
         db.textNeedMoneyBuyProduceAether[var].text = string.Format("{0:#,###}", db.NeedMoneyBuyProduceAether(var, var1+1));
     }
-    void TextNeedMoneyBuyProduceAetherUpdate()
+    /* void TextNeedMoneyBuyProduceAetherUpdate()
     {
         for (int i = 0; i < 3; i++)
         {
@@ -134,17 +142,48 @@ public class ShopM : MonoBehaviour
             //db.textNeedMoneyBuyProduceAether[i].text = db.NeedMoneyBuyProduceAether(i, var).ToString();
             db.textNeedMoneyBuyProduceAether[i].text = string.Format("{0:#,###}", db.NeedMoneyBuyProduceAether(i, var));
         }
-    }
+    } */
     void DownTextCountProduceAether(int var)
     {
-        db.textCountProduceAether[var].text = string.Format("("+"{0:#,###}"+")", db.CountProduceAether(var));
+        if(db.CountProduceAether(var) == 0) { db.textCountProduceAether[var].text = ""; }
+        else 
+        {
+            db.textCountProduceAether[var].text = string.Format("("+"{0:#,###}"+")", db.CountProduceAether(var));
+        }
     }
-    void DownTextCountProduceAether()
+    /* void DownTextCountProduceAether()
     {
         for (int i = 0; i < 3; i++)
         {
             if(db.CountProduceAether(i) == 0) { db.textCountProduceAether[i].text = ""; }
             else { db.textCountProduceAether[i].text = string.Format("("+"{0:#,###}"+")", db.CountProduceAether(i)); }
         }
+    } */
+    void DownTextEffectProduceAether(int var)
+    {
+        int var1 = db.CountProduceAether(var);
+        if(var == 0) 
+        {
+            db.textEffectProduceAether[var].text = string.Format("+ " + db.PerProduceAether(var, var1 + 1) + "/sec");
+        }
+        else
+        {
+            db.textEffectProduceAether[var].text = string.Format("제 " + var + "에테르 생산소 x " + db.PerProduceAether(var, var1 + 1));
+        }
     }
+
+    void StartDownTextAether()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            int var = db.CountProduceAether(i);
+            TextNeedMoneyBuyProduceAetherUpdate(i, var - 1);
+            DownTextCountProduceAether(i);
+            DownTextEffectProduceAether(i);
+        }
+        UpColorProduceAether();
+    }
+
+    #endregion
+
 }

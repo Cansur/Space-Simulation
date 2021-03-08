@@ -31,6 +31,7 @@ using UnityEngine.UI;
     public GameObject[] goProduceAether = new GameObject[4];
 
     public Text[] textCountProduceAether = new Text[4];
+    public Text[] textEffectProduceAether = new Text[4];
     public Text[] textNeedMoneyBuyProduceAether = new Text[4];
     public GameObject[] goProduceAetherButton = new GameObject[4];
     [SerializeField] int[] countProduceAether = new int[4];
