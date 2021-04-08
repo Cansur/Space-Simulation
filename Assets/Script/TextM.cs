@@ -16,7 +16,7 @@ public class TextM : MonoBehaviour
     void Start()
     {
         db = GameObject.FindWithTag("DataBase").GetComponent<DB>();
-        db.Money = 100;
+        //db.Money = 100;
         //verCount = StartCoroutine(Count((float)(db.Money + db.Per1sec), (float)db.Money));
         StartCoroutine(CountA(db.Money+db.TotalPerSec, db.Money));
     } 

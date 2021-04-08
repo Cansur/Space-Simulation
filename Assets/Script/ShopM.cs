@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class ShopM : MonoBehaviour
 {
     DB db;
+    DValue dValue;
     [SerializeField]
-    Image[] colorProduceAetherButton = new Image[4];
+    Image[] colorProduceAetherButton = new Image[6];
     void Start()
     {
         db = GameObject.FindWithTag("DataBase").GetComponent<DB>();
-        TestD();
+        dValue = GameObject.FindWithTag("DValue").GetComponent<DValue>();
+        //TestD();  DValue 스크립트로
         //StartDownTextAether();
         //UpColorProduceAether();
         //DownTextCountProduceAether();
@@ -29,7 +31,6 @@ public class ShopM : MonoBehaviour
     {
         int var1 = db.CountProduceAether(var); // var = 1 이면 var1 은 0
         if(db.NeedMoneyBuyProduceAether(var, var1) <= db.Money)
-
         {
             //if(var == 1){Debug.Log("야호");}
             db.Money -= db.NeedMoneyBuyProduceAether(var, var1);
@@ -61,7 +62,7 @@ public class ShopM : MonoBehaviour
 
     void UpColorProduceAether()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 6; i++)
         {
             if(db.Money >= db.NeedMoneyBuyProduceAether(i, db.CountProduceAether(i))) 
             {
@@ -87,46 +88,16 @@ public class ShopM : MonoBehaviour
         }
     }
 
-    void TestD()
+    public void TestD()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 6; i++)
         {
             colorProduceAetherButton[i] = db.goProduceAetherButton[i].GetComponent<Image>();
         }
         //colorProduceAetherButton[0].color = new Color(231/255f, 115/255f, 103/255f);
         //colorProduceAetherButton[0] = new Color(1, 1, 1);
-        db.NeedMoneyBuyProduceAether(0, 0, 100);
-        db.NeedMoneyBuyProduceAether(0, 1, 200);
-        db.NeedMoneyBuyProduceAether(0, 2, 300);
-        db.NeedMoneyBuyProduceAether(0, 3, 500);
-        db.NeedMoneyBuyProduceAether(0, 4, 600);
-        db.NeedMoneyBuyProduceAether(0, 5, 700);
-        db.NeedMoneyBuyProduceAether(0, 6, 800);
-        db.NeedMoneyBuyProduceAether(0, 7, 100000000);
-        db.NeedMoneyBuyProduceAether(1, 0, 200);
-        db.NeedMoneyBuyProduceAether(1, 1, 300);
-        db.NeedMoneyBuyProduceAether(1, 2, 400);
-        db.NeedMoneyBuyProduceAether(1, 3, 100000000);
-        db.NeedMoneyBuyProduceAether(2, 0, 1000);
-        db.NeedMoneyBuyProduceAether(2, 1, 10000);
-        db.NeedMoneyBuyProduceAether(2, 1, 100000000);
-        db.PerProduceAether(0, 0, 10); // 더하기
-        db.PerProduceAether(0, 1, 10);
-        db.PerProduceAether(0, 2, 10);
-        db.PerProduceAether(0, 3, 10);
-        db.PerProduceAether(0, 4, 10);
-        db.PerProduceAether(0, 5, 10);
-        db.PerProduceAether(0, 6, 10);
-        db.PerProduceAether(0, 7, 10);
-        db.PerProduceAether(1, 0, 1); // 곱하기
-        db.PerProduceAether(1, 1, 2);
-        db.PerProduceAether(1, 2, 3);
-        db.PerProduceAether(1, 3, 4);
-        db.PerProduceAether(1, 4, 5);
-        db.PerProduceAether(2, 0, 1);
-        db.PerProduceAether(2, 1, 2);
-        db.PerProduceAether(2, 2, 3);
         StartDownTextAether();
+        //dValue.ShopProduceAther();
         //TextNeedMoneyBuyProduceAetherUpdate();
     }
     // 문제 있고
@@ -164,17 +135,17 @@ public class ShopM : MonoBehaviour
         int var1 = db.CountProduceAether(var);
         if(var == 0) 
         {
-            db.textEffectProduceAether[var].text = string.Format("+ " + db.PerProduceAether(var, var1 + 1) + "/sec");
+            db.textEffectProduceAether[var].text = string.Format("+ " + db.PerProduceAether(var, var1) + "/sec");
         }
         else
         {
-            db.textEffectProduceAether[var].text = string.Format("제 " + var + "에테르 생산소 x " + db.PerProduceAether(var, var1 + 1));
+            db.textEffectProduceAether[var].text = string.Format("제 " + var + "에테르 생산소 x " + db.PerProduceAether(var, var1));
         }
     }
 
     void StartDownTextAether()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 6; i++)
         {
             int var = db.CountProduceAether(i);
             TextNeedMoneyBuyProduceAetherUpdate(i, var - 1);
