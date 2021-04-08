@@ -100,6 +100,7 @@ public class ShopM : MonoBehaviour
         //dValue.ShopProduceAther();
         //TextNeedMoneyBuyProduceAetherUpdate();
     }
+
     // 문제 있고
     void TextNeedMoneyBuyProduceAetherUpdate(int var, int var1) 
     { 
@@ -143,7 +144,7 @@ public class ShopM : MonoBehaviour
         }
     }
 
-    void StartDownTextAether()
+    public void StartDownTextAether()
     {
         for (int i = 0; i < 6; i++)
         {

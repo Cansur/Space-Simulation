@@ -42,6 +42,7 @@
      <Compile Include="Assets\Script\DataBase\DValue.cs" />
      <Compile Include="Assets\Script\DataBase\Spreadsheet.cs" />
      <Compile Include="Assets\Script\MoveButton.cs" />
+     <Compile Include="Assets\Script\RebirthM.cs" />
      <Compile Include="Assets\Script\ShopM.cs" />
      <Compile Include="Assets\Script\Test\SceneMove.cs" />
      <Compile Include="Assets\Script\Test\TestA.cs" />

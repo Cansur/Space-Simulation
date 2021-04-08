@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DataBase
   - DValue
+  - ShopM
   layers:
   - Default
   - TransparentFX

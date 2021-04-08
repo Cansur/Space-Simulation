@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - DB
     - DValue
     - MoveButton
+    - RebirthM
     - SceneMove
     - ShopM
     - Spreadsheet
@@ -119,6 +120,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14078}
     - Class: 114
       Script: {instanceID: 14276}
+    - Class: 114
+      Script: {instanceID: 17190}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -403,7 +406,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 633847615d283eb23b35be3a5c0c3315
+      Hash: 4aee1037a6602c453a9ef7ab6f652d31
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DB
@@ -743,8 +746,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 99b928618e6f36e647d0c13640ad039c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RebirthM
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
   - Assets/Scenes/Test.unity
-  playerPath: C:/Users/USER/Documents/GitHub/Space simulation/Bata 0.7.2.apk
+  playerPath: C:/Users/USER/Documents/GitHub/Space simulation/Bata 0.7.3.apk

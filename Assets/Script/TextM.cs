@@ -67,6 +67,7 @@ public class TextM : MonoBehaviour
             long var = (target - current) / 10;
             for (int i = 0; i < 10; i++)
             {
+                if(db.isAetherStop) { db.isAetherStop = false; break; }
                 current += var;
                 db.Money += var;
                 textMoney.text = string.Format("{0:#,###}", db.Money);

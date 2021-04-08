@@ -52,6 +52,8 @@ using UnityEngine.UI;
     public void PerProduceAether(int var, int var1, int var2) { perProduceAether[var][var1] = var2; }
     public long PerProduceAether(int var, int var1) { return perProduceAether[var][var1]; }
 
+    public bool isAetherStop;
+
     #endregion
 
     public GameObject[] backGround;
