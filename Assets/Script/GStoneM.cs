@@ -39,7 +39,7 @@ public class GStoneM : MonoBehaviour
             }
             else if(1 <= db.gStoneCount && 10 >= db.gStoneCount)
             {
-                int var1 = Random.Range(0, 9); // 수호석 1번쨰는 인덱스 번호 0임
+                int var1 = Random.Range(1, 9); // 수호석 1번쨰는 인덱스 번호 0임
                 db.gStone[var1] = true;
                 db.Pt -= db.PriceGStone(db.gStoneCount);
             }
