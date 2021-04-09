@@ -49,9 +49,14 @@ public class RebirthM : MonoBehaviour
         {
             db.IsProduceAether(i, false);
             db.CountProduceAether(i, 0);
+            db.goProduceAether[i].SetActive(false);
         }
         shopM.StartDownTextAether();
-        for (int i = 0; i < 6; i++) { db.goProduceAether[i].SetActive(false); }
+        for (int i = 0; i < 3; i++) 
+        { 
+            db.isUnlockRebirthBack[i] = false;
+            db.unlockRebirthBack[i].SetActive(true);
+        }
         db.Money = 100;
     }
 }

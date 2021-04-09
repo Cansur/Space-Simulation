@@ -41,6 +41,7 @@
      <Compile Include="Assets\Script\DataBase\DB.cs" />
      <Compile Include="Assets\Script\DataBase\DValue.cs" />
      <Compile Include="Assets\Script\DataBase\Spreadsheet.cs" />
+     <Compile Include="Assets\Script\GStoneM.cs" />
      <Compile Include="Assets\Script\MoveButton.cs" />
      <Compile Include="Assets\Script\RebirthM.cs" />
      <Compile Include="Assets\Script\ShopM.cs" />

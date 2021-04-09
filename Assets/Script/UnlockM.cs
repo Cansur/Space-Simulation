@@ -5,11 +5,16 @@ using UnityEngine;
 public class UnlockM : MonoBehaviour
 {
     DB db;
+
+    bool isSlotGStone;
     
     void Start()
     {
         db = GameObject.FindWithTag("DataBase").GetComponent<DB>();
         for (int i = 0; i < 6; i++) { db.goProduceAether[i].SetActive(false); }
+        for (int i = 0; i < 3; i++) { db.unlockRebirthBack[i].SetActive(true); }
+        db.panelSlotGStone.SetActive(false);
+        isSlotGStone = false;
     }
     
     void Update()
@@ -20,6 +25,12 @@ public class UnlockM : MonoBehaviour
         if(db.Money >= 1000 && db.IsProduceAether(3) == false){ db.IsProduceAether(3, true); }
         if(db.Money >= 5000000 && db.IsProduceAether(4) == false){ db.IsProduceAether(4, true); }
         if(db.Money >= 100000000 && db.IsProduceAether(5) == false){ db.IsProduceAether(5, true); }
+
+        if(db.TotalPerSec >= 10000 && db.isUnlockRebirthBack[1] == false) { db.isUnlockRebirthBack[1] = true; }
+        if(db.Pt >= 1 && db.isUnlockRebirthBack[0] == false) { db.isUnlockRebirthBack[0] = true; }
+
+        if(db.gStoneCount >= 1 && isSlotGStone == false) { isSlotGStone = true; }
+        
         for (int i = 0; i < 6; i++)
         {
             if(db.IsProduceAether(i) == true && db.goProduceAether[i].activeSelf == false)
@@ -27,5 +38,20 @@ public class UnlockM : MonoBehaviour
                 db.goProduceAether[i].SetActive(true);
             }
         }
+        for (int i = 0; i < 3; i++)
+        {
+            if(db.isUnlockRebirthBack[i] == true && db.unlockRebirthBack[i].activeSelf == true)
+            {
+                db.unlockRebirthBack[i].SetActive(false);
+            }
+        }
+        for (int i = 0; i < db.gStone.Length; i++)
+        {
+            if(db.gStone[i] == true) { db.SlotGStone[i].SetActive(true); }
+        }
+
+        if(isSlotGStone == true && db.panelSlotGStone.activeSelf == false){ db.panelSlotGStone.SetActive(true); }
     }
+
+    
 }

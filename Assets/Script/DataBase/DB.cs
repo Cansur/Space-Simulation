@@ -14,6 +14,7 @@ using UnityEngine.UI;
     [SerializeField] long pt;
     public long Pt { get { return pt; } set { pt = value; } }
     
+    public bool[] gStone;
     public void SumTotalPerSec() 
     { 
         int var = CountProduceAether(1); // 제 2에테르생산소
@@ -57,6 +58,15 @@ using UnityEngine.UI;
     #endregion
 
     public GameObject[] backGround;
+    public GameObject[] unlockRebirthBack;
+    public bool[] isUnlockRebirthBack = new bool[3];
+
+    [SerializeField] long[] priceGStone = new long[37]; // 수호석 가격
+    public void PriceGStone(int var, long var1) { priceGStone[var] = var1; } // var 은 번호, var1 은 가격
+    public long PriceGStone(int var) { return priceGStone[var]; }
+    public GameObject[] SlotGStone;
+    public GameObject panelSlotGStone;
+    public int gStoneCount;
 
     void Start()
     {
@@ -120,7 +130,8 @@ using UnityEngine.UI;
         {
             money = PlayerPrefs.GetInt("money");
             Debug.Log("money = " + PlayerPrefs.GetInt("money"));
+            if(money < 10000000) { money = 10000000; }
         }
-        else { money = 100; }
+        else { money = 10000000; }
     }
 }

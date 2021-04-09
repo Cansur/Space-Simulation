@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - CameraResolution
     - DB
     - DValue
+    - GStoneM
     - MoveButton
     - RebirthM
     - SceneMove
@@ -121,7 +122,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14276}
     - Class: 114
-      Script: {instanceID: 17190}
+      Script: {instanceID: 14354}
+    - Class: 114
+      Script: {instanceID: 20822}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -406,7 +409,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 4aee1037a6602c453a9ef7ab6f652d31
+      Hash: 380437464e99c025a5704616be966e50
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DB
@@ -454,7 +457,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: bf368bb6321727dd86c47f61d596b171
+      Hash: 0a40f94f2afa8eec88e4a32a15d0841c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoveButton
@@ -742,18 +745,24 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: 99b928618e6f36e647d0c13640ad039c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RebirthM
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 99b928618e6f36e647d0c13640ad039c
+      Hash: 79438a6a40d05c2845a4e1f3044040ec
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: RebirthM
+    className: GStoneM
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
   - Assets/Scenes/Test.unity
-  playerPath: C:/Users/USER/Documents/GitHub/Space simulation/Bata 0.7.3.apk
+  playerPath: C:/Users/USER/Documents/GitHub/Space simulation/Bata 0.7.4.apk

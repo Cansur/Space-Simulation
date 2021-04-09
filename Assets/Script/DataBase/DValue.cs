@@ -11,6 +11,7 @@ public class DValue : MonoBehaviour
     {
         db = GameObject.FindWithTag("DataBase").GetComponent<DB>();
         ShopProduceAther();
+        PriceGStone();
     }
 
     public void ShopProduceAther()
@@ -145,5 +146,18 @@ public class DValue : MonoBehaviour
         {
             db.PerProduceAether(5, i, i+1);
         }
+    }
+    
+    void PriceGStone()
+    {
+        db.PriceGStone(0, 1);
+        db.PriceGStone(1, 4);
+        db.PriceGStone(2, 10);
+        db.PriceGStone(3, 30);
+        db.PriceGStone(4, 80);
+        db.PriceGStone(5, 160);
+        db.PriceGStone(6, 300);
+        db.PriceGStone(7, 500);
+        db.PriceGStone(8, 1000);
     }
 }

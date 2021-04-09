@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MoveButton : MonoBehaviour
 {
     DB db;
+    public GStoneM gStoneM;
     public Image[] imageButton;
 
     void Start()
@@ -48,6 +49,10 @@ public class MoveButton : MonoBehaviour
         imageButton[var].color = new Color(231/255f, 231/255f, 231/255f);
         ResetBG();
         db.backGround[var].SetActive(true);
+        if(var == 1)
+        {
+            gStoneM.UpdateText();
+        }
     }
 
     void ResetColor()
