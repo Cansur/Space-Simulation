@@ -64,7 +64,7 @@ using UnityEngine.UI;
     [SerializeField] long[] priceGStone = new long[37]; // 수호석 가격
     public void PriceGStone(int var, long var1) { priceGStone[var] = var1; } // var 은 번호, var1 은 가격
     public long PriceGStone(int var) { return priceGStone[var]; }
-    public GameObject[] SlotGStone;
+    public GameObject[] slotGStone;
     public GameObject panelSlotGStone;
     public int gStoneCount;
 

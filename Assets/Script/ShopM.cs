@@ -18,6 +18,7 @@ public class ShopM : MonoBehaviour
         //UpColorProduceAether();
         //DownTextCountProduceAether();
         //TextNeedMoneyBuyProduceAetherUpdate();
+        UpdateText();
     }
 
     void Update()
@@ -56,6 +57,7 @@ public class ShopM : MonoBehaviour
             TextNeedMoneyBuyProduceAetherUpdate(var, var1);
             DownColorProduceAether(var);
             DownTextCountProduceAether(var);
+            One();
         }
     }
    
@@ -78,6 +80,17 @@ public class ShopM : MonoBehaviour
                     colorProduceAetherButton[i].color = new Color(231/255f, 115/255f, 103/255f);
                 }
             }
+        }
+    }
+    void One()
+    {
+        if(db.Money >= db.NeedMoneyBuyProduceAether(0, db.CountProduceAether(0)))
+        {
+            colorProduceAetherButton[0].color = new Color(103/255f, 231/255f, 107/255f);
+        }
+        else if(db.Money < db.NeedMoneyBuyProduceAether(0, db.CountProduceAether(0)))
+        {
+            colorProduceAetherButton[0].color = new Color(231/255f, 115/255f, 103/255f);
         }
     }
     void DownColorProduceAether(int var)
@@ -158,4 +171,9 @@ public class ShopM : MonoBehaviour
 
     #endregion
 
+    void UpdateText()
+    {
+        db.slotGStone[0].transform.GetChild(1).GetComponent<Text>().text = string.Format("{0:#,###} Pt", 1);
+        db.slotGStone[0].transform.GetChild(2).GetComponent<Text>().text = "효과 : 에테르 생산량이 " + 2 + "배가 된다.";
+    }
 }

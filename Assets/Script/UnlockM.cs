@@ -47,7 +47,7 @@ public class UnlockM : MonoBehaviour
         }
         for (int i = 0; i < db.gStone.Length; i++)
         {
-            if(db.gStone[i] == true) { db.SlotGStone[i].SetActive(true); }
+            if(db.gStone[i] == true && db.slotGStone[i].activeSelf == false) { db.slotGStone[i].SetActive(true); }
         }
 
         if(isSlotGStone == true && db.panelSlotGStone.activeSelf == false){ db.panelSlotGStone.SetActive(true); }

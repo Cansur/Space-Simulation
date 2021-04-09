@@ -32,13 +32,18 @@ public class GStoneM : MonoBehaviour
     {
         if(db.Pt >= db.PriceGStone(db.gStoneCount))
         {
-            if(var <= 10)
+            if(db.gStoneCount == 0)
+            {
+                db.gStone[0] = true;
+                db.Pt -= db.PriceGStone(db.gStoneCount);
+            }
+            else if(1 <= db.gStoneCount && 10 >= db.gStoneCount)
             {
                 int var1 = Random.Range(0, 9); // 수호석 1번쨰는 인덱스 번호 0임
                 db.gStone[var1] = true;
                 db.Pt -= db.PriceGStone(db.gStoneCount);
             }
-            else if(11 <= var && 20 >= var)
+            else if(11 <= db.gStoneCount && 20 >= db.gStoneCount)
             {
                 int var1 = Random.Range(10, 19); // 수호석 1번쨰는 인덱스 번호 0임
                 db.gStone[var1] = true;
