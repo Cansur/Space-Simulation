@@ -22,8 +22,10 @@ using UnityEngine.UI;
         int var2 = CountProduceAether(3); // 제 3에테르생산소
         int var3 = CountProduceAether(4); // 제 4에테르생산소
         int var4 = CountProduceAether(5); // 제 5에테르생산소
+        int var5 = gStoneUpgradeCount[0];
         //Debug.Log(var);
         long longvar = PerProduceAether(1, var) * PerProduceAether(2, var1) * PerProduceAether(3, var2) * PerProduceAether(4, var3) * PerProduceAether(5, var4);
+        if(gStone[0] == true) { longvar = PerProduceAether(1, var) * PerProduceAether(2, var1) * PerProduceAether(3, var2) * PerProduceAether(4, var3) * PerProduceAether(5, var4) * gStoneUpgradeEffect[0][var5];}
         TotalPerSec = (Per1sec * longvar);
         //if
         //int var = CountProduceAether(1);
@@ -57,9 +59,12 @@ using UnityEngine.UI;
 
     #endregion
 
+    
     public GameObject[] backGround;
     public GameObject[] unlockRebirthBack;
     public bool[] isUnlockRebirthBack = new bool[3];
+
+    #region 수호석
 
     [SerializeField] long[] priceGStone = new long[37]; // 수호석 가격
     public void PriceGStone(int var, long var1) { priceGStone[var] = var1; } // var 은 번호, var1 은 가격
@@ -67,6 +72,17 @@ using UnityEngine.UI;
     public GameObject[] slotGStone;
     public GameObject panelSlotGStone;
     public int gStoneCount;
+    
+    // 업그레이드 가능한 수호석
+    // 0번 - 1초당 증가하는 에테르량 증가 (2배)
+    // 1번 - Pt얻는양 증가 (1.2배)
+    // 2번 - .....
+    public int[] gStoneUpgradeCount = new int[2];
+    public long[][] gStoneUpgradePrice = new long[2][];
+    public long[][] gStoneUpgradeEffect = new long[2][];
+    public bool[] gStoneOnOff;
+
+    #endregion
 
     void Start()
     {
@@ -84,6 +100,10 @@ using UnityEngine.UI;
         perProduceAether[4] = new long[100];
         perProduceAether[5] = new long[100];
         //perProduceAether[4] = new long[20];
+        gStoneUpgradePrice[0] = new long[100];
+        gStoneUpgradePrice[1] = new long[100];
+        gStoneUpgradeEffect[0] = new long[100];
+        gStoneUpgradeEffect[1] = new long[100];
         SumTotalPerSec();
         GameLoad();
     }
@@ -108,7 +128,7 @@ using UnityEngine.UI;
     private void OnApplicationQuit()
     {
         GameSave();
-        Debug.Log("money = " + PlayerPrefs.GetInt("money"));
+        //Debug.Log("money = " + PlayerPrefs.GetInt("money"));
     }
 
     void OnApplicationPause(bool pauseStatus)
@@ -129,7 +149,7 @@ using UnityEngine.UI;
         if(PlayerPrefs.HasKey("money"))
         {
             money = PlayerPrefs.GetInt("money");
-            Debug.Log("money = " + PlayerPrefs.GetInt("money"));
+            //Debug.Log("money = " + PlayerPrefs.GetInt("money"));
             if(money < 10000000) { money = 10000000; }
         }
         else { money = 10000000; }

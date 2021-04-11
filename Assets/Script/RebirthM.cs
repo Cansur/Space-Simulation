@@ -12,6 +12,7 @@ public class RebirthM : MonoBehaviour
     public GameObject panelRebirth;
     public Text textTotalPt;
     float var;
+    float var1;
     void Start()
     {
         db = GameObject.FindWithTag("DataBase").GetComponent<DB>();
@@ -21,13 +22,13 @@ public class RebirthM : MonoBehaviour
     public void OnClickEasy()
     {
         var = Mathf.Floor(db.TotalPerSec / 10000);
-        
+        var1 = (float)db.gStoneUpgradeEffect[1][db.gStoneUpgradeCount[1]]/10;
         bool ispanelRebirth = panelRebirth.activeSelf == false ? true : false;
         panelRebirth.SetActive(ispanelRebirth);
         if(var == 0) { textTotalPt.text = string.Format("총 " + "<color=#DBD560>" + "0" + "Pt" + "</color>" + "를 획득합니다."); }
         else
         {
-            textTotalPt.text = string.Format("총 " + "<color=#DBD560>" + "{0:#,###}" + "Pt" + "</color>" + "를 획득합니다.", var);
+            textTotalPt.text = string.Format("총 " + "<color=#DBD560>" + "{0:#,###}" + "Pt" + "</color>" + "를 획득합니다.", var*(1+var1));
         }
     }
 
@@ -36,7 +37,7 @@ public class RebirthM : MonoBehaviour
         RebirhEasy();
         panelRebirth.SetActive(false);
         db.backGround[2].SetActive(false);
-        db.Pt += (long)var;
+        db.Pt += (long)(var*(1+var1));
     }
 
     void RebirhEasy()

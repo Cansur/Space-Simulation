@@ -36,20 +36,27 @@ public class GStoneM : MonoBehaviour
             {
                 db.gStone[0] = true;
                 db.Pt -= db.PriceGStone(db.gStoneCount);
+                panelGStone.SetActive(false);
             }
             else if(1 <= db.gStoneCount && 10 >= db.gStoneCount)
             {
                 int var1 = Random.Range(1, 9); // 수호석 1번쨰는 인덱스 번호 0임
-                db.gStone[var1] = true;
-                db.Pt -= db.PriceGStone(db.gStoneCount);
+                Debug.Log(var1);
+                if(db.gStone[var1] == false)
+                {
+                    db.gStone[var1] = true;
+                    db.Pt -= db.PriceGStone(db.gStoneCount);
+                    panelGStone.SetActive(false);
+                }
+                else { OnClickEasyYes(); }
             }
             else if(11 <= db.gStoneCount && 20 >= db.gStoneCount)
             {
                 int var1 = Random.Range(10, 19); // 수호석 1번쨰는 인덱스 번호 0임
                 db.gStone[var1] = true;
                 db.Pt -= db.PriceGStone(db.gStoneCount);
+                panelGStone.SetActive(false);
             }
-            panelGStone.SetActive(false);
             UpdateText();
         }
     }

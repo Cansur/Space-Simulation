@@ -12,6 +12,7 @@ public class DValue : MonoBehaviour
         db = GameObject.FindWithTag("DataBase").GetComponent<DB>();
         ShopProduceAther();
         PriceGStone();
+        //GStoneUpgradeSet();
     }
 
     public void ShopProduceAther()
@@ -160,4 +161,22 @@ public class DValue : MonoBehaviour
         db.PriceGStone(7, 500);
         db.PriceGStone(8, 1000);
     }
+
+    // 순서가 이상하게 된 문제로 함수를 ShopM 스크립트로 이동합니다.
+
+    /* public void GStoneUpgradeSet()
+    {
+        // 업그레이드 가능한 수호석
+        // 0번 - 1초당 증가하는 에테르량 증가 (2배)
+        // 1번 - Pt얻는양 증가 (1.2배)
+        // 2번 - .....
+        db.gStoneUpgradePrice[0][0] = (long)2;
+        db.gStoneUpgradePrice[1][0] = (long)5;
+        for (int i = 1; i < 100; i++)
+        {
+            db.gStoneUpgradePrice[0][i] = db.gStoneUpgradePrice[0][i-1] * 3 * (i/20);
+            db.gStoneUpgradePrice[1][i] = db.gStoneUpgradePrice[0][i-1] * 5 * (i/20);
+        }
+        //Debug.Log(db.gStoneUpgradePrice[0][0]);
+    } */
 }
