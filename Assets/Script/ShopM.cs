@@ -305,8 +305,8 @@ public class ShopM : MonoBehaviour
     {
         for (int i = 0; i < db.gStoneOnOff.Length; i++)
         {
-            if(db.gStoneOnOff[i] == true) { colorGStoneButtonOnOff[i].color = new Color(103/255f, 231/255f, 107/255f); gStoneOnOfftext[i].text = "On"; }
-            else { colorGStoneButtonOnOff[i].color = new Color(109/255f, 109/255f, 109/255f); gStoneOnOfftext[i].text = "Off";}
+            if(db.gStoneOnOff[i] == true) { colorGStoneButtonOnOff[i].color = new Color(152/255f, 152/255f, 152/255f); gStoneOnOfftext[i].text = "On"; }
+            else { colorGStoneButtonOnOff[i].color = new Color(53/255f, 53/255f, 53/255f); gStoneOnOfftext[i].text = "Off";}
         }
         yield return new WaitForSeconds(0.2f);
         StartCoroutine(UpdateGStoneOnOff());

@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AnimationM
+    - AutoM
     - CameraResolution
     - DB
     - DValue
@@ -80,51 +81,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 11268}
+      Script: {instanceID: 11260}
     - Class: 114
-      Script: {instanceID: 11330}
+      Script: {instanceID: 11270}
     - Class: 114
-      Script: {instanceID: 11470}
+      Script: {instanceID: 11332}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 11472}
     - Class: 114
-      Script: {instanceID: 11524}
+      Script: {instanceID: 11476}
     - Class: 114
-      Script: {instanceID: 11696}
+      Script: {instanceID: 11526}
     - Class: 114
-      Script: {instanceID: 12014}
+      Script: {instanceID: 11698}
     - Class: 114
-      Script: {instanceID: 12102}
+      Script: {instanceID: 12016}
     - Class: 114
-      Script: {instanceID: 12188}
+      Script: {instanceID: 12104}
     - Class: 114
-      Script: {instanceID: 12342}
+      Script: {instanceID: 12190}
     - Class: 114
-      Script: {instanceID: 12540}
+      Script: {instanceID: 12344}
     - Class: 114
-      Script: {instanceID: 12578}
+      Script: {instanceID: 12542}
     - Class: 114
-      Script: {instanceID: 12896}
+      Script: {instanceID: 12580}
     - Class: 114
-      Script: {instanceID: 12912}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 13040}
+      Script: {instanceID: 12914}
     - Class: 114
-      Script: {instanceID: 13202}
+      Script: {instanceID: 12938}
     - Class: 114
-      Script: {instanceID: 13360}
+      Script: {instanceID: 13044}
     - Class: 114
-      Script: {instanceID: 13662}
+      Script: {instanceID: 13206}
     - Class: 114
-      Script: {instanceID: 13916}
+      Script: {instanceID: 13364}
     - Class: 114
-      Script: {instanceID: 14078}
+      Script: {instanceID: 13666}
     - Class: 114
-      Script: {instanceID: 14276}
+      Script: {instanceID: 13920}
     - Class: 114
-      Script: {instanceID: 14354}
+      Script: {instanceID: 14082}
     - Class: 114
-      Script: {instanceID: 20822}
+      Script: {instanceID: 14280}
+    - Class: 114
+      Script: {instanceID: 14358}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -161,19 +164,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11274}
+      Script: {instanceID: 11276}
     - Class: 114
-      Script: {instanceID: 11470}
+      Script: {instanceID: 11472}
     - Class: 114
-      Script: {instanceID: 11524}
+      Script: {instanceID: 11526}
     - Class: 114
-      Script: {instanceID: 12188}
+      Script: {instanceID: 12190}
     - Class: 114
-      Script: {instanceID: 12896}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 13662}
+      Script: {instanceID: 13666}
     - Class: 114
-      Script: {instanceID: 14276}
+      Script: {instanceID: 14280}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -223,7 +226,13 @@ ScriptsOnlyBuild:
     className: TestB
   - hash:
       serializedVersion: 2
-      Hash: 142d9a49cf9f204653a3995059b59ca6
+      Hash: 79438a6a40d05c2845a4e1f3044040ec
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GStoneM
+  - hash:
+      serializedVersion: 2
+      Hash: 850645db3684d090c1cf1b47d9fa2a39
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShopM
@@ -409,7 +418,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 380437464e99c025a5704616be966e50
+      Hash: 8a3570d4d30f2489c45e0c8b595280e4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DB
@@ -527,6 +536,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 4dfbadac18f22e1120d186f9faf05426
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AutoM
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -755,14 +770,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 79438a6a40d05c2845a4e1f3044040ec
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GStoneM
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
   - Assets/Scenes/Test.unity
-  playerPath: C:/Users/USER/Documents/GitHub/Space simulation/Bata 0.7.4.apk
+  playerPath: C:/Users/USER/Documents/GitHub/Space simulation/Bata 0.7.5.apk

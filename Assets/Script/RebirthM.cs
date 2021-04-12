@@ -58,6 +58,6 @@ public class RebirthM : MonoBehaviour
             db.isUnlockRebirthBack[i] = false;
             db.unlockRebirthBack[i].SetActive(true);
         }
-        db.Money = 100;
+        db.Money = 10000000;
     }
 }

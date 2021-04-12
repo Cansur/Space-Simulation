@@ -160,6 +160,8 @@ public class DValue : MonoBehaviour
         db.PriceGStone(6, 300);
         db.PriceGStone(7, 500);
         db.PriceGStone(8, 1000);
+        db.PriceGStone(9, 10000);
+        db.PriceGStone(10, 100000000000000);
     }
 
     // 순서가 이상하게 된 문제로 함수를 ShopM 스크립트로 이동합니다.

@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\AnimationM.cs" />
+     <Compile Include="Assets\Script\AutoM.cs" />
      <Compile Include="Assets\Script\CameraResolution.cs" />
      <Compile Include="Assets\Script\DataBase\DB.cs" />
      <Compile Include="Assets\Script\DataBase\DValue.cs" />

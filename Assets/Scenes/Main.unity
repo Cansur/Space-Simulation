@@ -5871,7 +5871,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "5. [Easy \uD658\uC0DD]\uC740 \uCD08\uB2F9 10000\uBD80\uD130 \uD658\uC0DD
+  m_Text: "- [Easy \uD658\uC0DD]\uC740 \uCD08\uB2F9 10000\uBD80\uD130 \uD658\uC0DD
     \uAC00\uB2A5\uD569\uB2C8\uB2E4."
 --- !u!222 &391517971
 CanvasRenderer:
@@ -6568,7 +6568,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "4. Pt\uB294 [Easy \uD658\uC0DD]\uC5D0\uC11C\uB294 \uCD08\uAE30\uD654\uAC00
+  m_Text: "- Pt\uB294 [Easy \uD658\uC0DD]\uC5D0\uC11C\uB294 \uCD08\uAE30\uD654\uAC00
     \uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
 --- !u!222 &417968576
 CanvasRenderer:
@@ -9527,8 +9527,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC218\uD638\uC11D\uC744 \uAC15\uD654\uD558\uB294 \uB370\uC5D0\uB3C4 Pt\uAC00
-    \uC77C\uC815\uB7C9 \uB4E4\uC5B4\uAC11\uB2C8\uB2E4."
+  m_Text: "- \uC218\uD638\uC11D\uC744 \uAC15\uD654\uD558\uB294 \uB370\uC5D0\uB3C4
+    Pt\uAC00 \uC77C\uC815\uB7C9 \uB4E4\uC5B4\uAC11\uB2C8\uB2E4."
 --- !u!222 &631891643
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10774,7 +10774,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC218\uD638\uC11D\uC5D0\uB294 \uB2E8\uACC4\uAC00 \uC788\uC2B5\uB2C8\uB2E4.(ex
+  m_Text: "- \uC218\uD638\uC11D\uC5D0\uB294 \uB2E8\uACC4\uAC00 \uC788\uC2B5\uB2C8\uB2E4.(ex
     1~10, 11~20...)"
 --- !u!222 &736930842
 CanvasRenderer:
@@ -12258,7 +12258,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "1. \uB3C8\uACFC \uC5D0\uD14C\uB974 \uC0DD\uC0B0\uC18C\uB97C \uCD08\uAE30\uD654
+  m_Text: "- \uB3C8\uACFC \uC5D0\uD14C\uB974 \uC0DD\uC0B0\uC18C\uB97C \uCD08\uAE30\uD654
     \uC2DC\uD0B5\uB2C8\uB2E4."
 --- !u!222 &806767784
 CanvasRenderer:
@@ -12898,7 +12898,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Pt\uB97C \uC0AC\uC6A9\uD558\uC5EC \uC218\uD638\uC11D\uC744 \uBF51\uC744
+  m_Text: "- Pt\uB97C \uC0AC\uC6A9\uD558\uC5EC \uC218\uD638\uC11D\uC744 \uBF51\uC744
     \uC218 \uC788\uC2B5\uB2C8\uB2E4."
 --- !u!222 &851725468
 CanvasRenderer:
@@ -15350,7 +15350,8 @@ MonoBehaviour:
   panelSlotGStone: {fileID: 827221770}
   gStoneCount: 0
   gStoneUpgradeCount: 0000000000000000
-  gStoneOnOff: 0000000000
+  gStoneOnOff: 0000000000000000
+  gSOF: 0000000000000000
 --- !u!4 &969493439
 Transform:
   m_ObjectHideFlags: 0
@@ -18127,7 +18128,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 7. .... .. .... ... ..... ...... ... ... .
+  m_Text: '- .... .. .... ... ..... ...... ... ... .'
 --- !u!222 &1198328472
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22177,6 +22178,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424961593}
   m_CullTransparentMesh: 0
+--- !u!1 &1429216615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1429216617}
+  - component: {fileID: 1429216616}
+  m_Layer: 0
+  m_Name: AutoM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1429216616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429216615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781577c8e1ca52242826f0cefa0ba3e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gStoneM: {fileID: 551785849}
+--- !u!4 &1429216617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429216615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.07130707, y: 1.449592, z: -47.021603}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1438018335
 GameObject:
   m_ObjectHideFlags: 0
@@ -24000,7 +24045,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "3. Pt\uC640 1\uCD08\uB2F9 \uC0DD\uC131 \uAE30\uBCF8 \uBE44\uC728\uC740
+  m_Text: "- Pt\uC640 1\uCD08\uB2F9 \uC0DD\uC131 \uAE30\uBCF8 \uBE44\uC728\uC740
     1 : 10000 \uC785\uB2C8\uB2E4."
 --- !u!222 &1578480723
 CanvasRenderer:
@@ -24265,8 +24310,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "2. \uCD08\uAE30\uD654\uB85C Pt(\uD3EC\uC778\uD2B8)\uB97C \uD68D\uB4DD
-    \uAC00\uB2A5\uD569\uB2C8\uB2E4."
+  m_Text: "- \uCD08\uAE30\uD654\uB85C Pt(\uD3EC\uC778\uD2B8)\uB97C \uD68D\uB4DD \uAC00\uB2A5\uD569\uB2C8\uB2E4."
 --- !u!222 &1610305708
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25138,7 +25182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBF51\uC740 \uC218\uD638\uC11D\uC740 \uB2E4\uC2DC \uBF51\uD788\uC9C0
+  m_Text: "- \uBF51\uC740 \uC218\uD638\uC11D\uC740 \uB2E4\uC2DC \uBF51\uD788\uC9C0
     \uC54A\uC2B5\uB2C8\uB2E4."
 --- !u!222 &1682354357
 CanvasRenderer:
@@ -26261,7 +26305,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC218\uD638\uC11D\uC740 [Easy \uD658\uC0DD]\uC73C\uB85C \uCD08\uAE30\uD654
+  m_Text: "- \uC218\uD638\uC11D\uC740 [Easy \uD658\uC0DD]\uC73C\uB85C \uCD08\uAE30\uD654
     \uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
 --- !u!222 &1748426918
 CanvasRenderer:
@@ -31817,7 +31861,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 6. .. ...... ... ...... .. .. ...... ... .. ... .... .. ..
+  m_Text: '- .. ...... ... ...... .. .. ...... ... .. ... .... .. ..'
 --- !u!222 &2055604809
 CanvasRenderer:
   m_ObjectHideFlags: 0

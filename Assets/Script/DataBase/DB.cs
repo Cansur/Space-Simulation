@@ -81,6 +81,7 @@ using UnityEngine.UI;
     public long[][] gStoneUpgradePrice = new long[2][];
     public long[][] gStoneUpgradeEffect = new long[2][];
     public bool[] gStoneOnOff;
+    public bool[] gSOF; // 코루틴을 반복시키지 못하게 변수 추가
 
     #endregion
 
@@ -142,6 +143,16 @@ using UnityEngine.UI;
     void GameSave()
     {
         PlayerPrefs.SetInt("money", (int)money);
+        /* PlayerPrefs.SetInt("Per", (int)per1sec);
+        PlayerPrefs.SetInt("Per", (int)totalPerSec);
+        PlayerPrefs.SetInt("Pt", (int)Pt);
+        PlayerPrefs.SetInt("A0", (int)countProduceAether[0]);
+        PlayerPrefs.SetInt("A1", (int)countProduceAether[1]);
+        PlayerPrefs.SetInt("A2", (int)countProduceAether[2]);
+        PlayerPrefs.SetInt("A3", (int)countProduceAether[3]);
+        PlayerPrefs.SetInt("A4", (int)countProduceAether[4]);
+        PlayerPrefs.SetInt("A5", (int)countProduceAether[5]); */
+
     }
     
     void GameLoad()

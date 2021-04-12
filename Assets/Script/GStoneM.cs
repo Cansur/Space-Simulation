@@ -3,6 +3,62 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+# region 표
+/* 1 : 10000 = pt : psec
+
+1pt - 1
+4pt - 2
+10pt - 3
+30pt - 4
+80pt - 5
+160pt - 6
+300pt - 7
+500pt - 8
+1000pt - 9..
+
+수호석
+0~9번 - 까지 1셋트
+10~19번 - 까지 2셋트
+20번 3셋트
+
+
+
+0. Psec 배수증가 x2
+1. Pt 배수증가 x 1.2
+2. 에테르 1 생산 자동화
+3. 에테르 2 생산 자동화
+4. 에테르 3 생산 자동화
+5. 에테르 4 생산 자동화
+6. 에테르 5 생산 자동화
+7. 에테르 6 생산 자동화
+8. 초기화 자동화
+9. 속도 상승(persec 10000이상)
+10. 시련 1 잠금해제
+11. 시련 2 잠금해제
+12. 시련 3 잠금해제
+13. 시련 4 잠금해제
+14. 시련 5 잠금해제
+15. 시련 6 잠금해제
+16. 시련 7 잠금해제
+17. 시련 8 잠금해제
+18. 시련 9 잠금해제
+19. 시련 10 잠금해제
+20. Pt 
+
+
+시련 1 잠금 - 1 생산 수호석 비례 증가
+시련 2 잠금 - 2 생산 수호석 비례 증가
+시련 3 잠금 - 3 생산 수호석 비례 증가
+시련 4 잠금 - 4 생산 수호석 비례 증가
+시련 5 잠금 - 5 생산 수호석 비례 증가
+시련 6 잠금 - 6 생산 수호석 비례 증가
+시련 7 잠금 - 1~2 생산 비용 감소
+시련 8 잠금 - 3~4 생산 비용 감소
+시련 9 잠금 - 5~6 생산 비용 감소
+시련 10 잠금 - 대량 구매 가능 */
+
+#endregion
+
 public class GStoneM : MonoBehaviour
 {
     DB db;
@@ -38,10 +94,9 @@ public class GStoneM : MonoBehaviour
                 db.Pt -= db.PriceGStone(db.gStoneCount);
                 panelGStone.SetActive(false);
             }
-            else if(1 <= db.gStoneCount && 10 >= db.gStoneCount)
+            else if(1 <= db.gStoneCount && 9 >= db.gStoneCount) 
             {
-                int var1 = Random.Range(1, 9); // 수호석 1번쨰는 인덱스 번호 0임
-                Debug.Log(var1);
+                int var1 = Random.Range(1, 10); // 수호석 1번쨰는 인덱스 번호 0임
                 if(db.gStone[var1] == false)
                 {
                     db.gStone[var1] = true;
@@ -50,12 +105,15 @@ public class GStoneM : MonoBehaviour
                 }
                 else { OnClickEasyYes(); }
             }
-            else if(11 <= db.gStoneCount && 20 >= db.gStoneCount)
+            else if(9 <= db.gStoneCount && 19 >= db.gStoneCount)
             {
-                int var1 = Random.Range(10, 19); // 수호석 1번쨰는 인덱스 번호 0임
-                db.gStone[var1] = true;
-                db.Pt -= db.PriceGStone(db.gStoneCount);
-                panelGStone.SetActive(false);
+                int var1 = Random.Range(11, 20); // 수호석 1번쨰는 인덱스 번호 0임
+                if(db.gStone[var1] == false)
+                {
+                    db.gStone[var1] = true;
+                    db.Pt -= db.PriceGStone(db.gStoneCount);
+                    panelGStone.SetActive(false);
+                }
             }
             UpdateText();
         }
