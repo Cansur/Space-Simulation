@@ -106,63 +106,13 @@ using UnityEngine.UI;
         gStoneUpgradeEffect[0] = new long[100];
         gStoneUpgradeEffect[1] = new long[100];
         SumTotalPerSec();
-        GameLoad();
+        StartCoroutine(UpdateC());
     }
 
-    void Update()
+    IEnumerator UpdateC()
     {
-        if(Application.platform == RuntimePlatform.Android)
-        {
-            if(Input.GetKey(KeyCode.Home))
-            {
-                GameSave();
-                Application.Quit();
-            }
-            if(Input.GetKey(KeyCode.Escape))
-            {
-                GameSave();
-                Application.Quit();
-            }
-        }
-    }
-
-    private void OnApplicationQuit()
-    {
-        GameSave();
-        //Debug.Log("money = " + PlayerPrefs.GetInt("money"));
-    }
-
-    void OnApplicationPause(bool pauseStatus)
-    {
-        if (pauseStatus)
-        {
-            GameSave();
-        }
-    }
-
-    void GameSave()
-    {
-        PlayerPrefs.SetInt("money", (int)money);
-        /* PlayerPrefs.SetInt("Per", (int)per1sec);
-        PlayerPrefs.SetInt("Per", (int)totalPerSec);
-        PlayerPrefs.SetInt("Pt", (int)Pt);
-        PlayerPrefs.SetInt("A0", (int)countProduceAether[0]);
-        PlayerPrefs.SetInt("A1", (int)countProduceAether[1]);
-        PlayerPrefs.SetInt("A2", (int)countProduceAether[2]);
-        PlayerPrefs.SetInt("A3", (int)countProduceAether[3]);
-        PlayerPrefs.SetInt("A4", (int)countProduceAether[4]);
-        PlayerPrefs.SetInt("A5", (int)countProduceAether[5]); */
-
-    }
-    
-    void GameLoad()
-    {
-        if(PlayerPrefs.HasKey("money"))
-        {
-            money = PlayerPrefs.GetInt("money");
-            //Debug.Log("money = " + PlayerPrefs.GetInt("money"));
-            if(money < 10000000) { money = 10000000; }
-        }
-        else { money = 10000000; }
+        SumTotalPerSec();
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(UpdateC());
     }
 }

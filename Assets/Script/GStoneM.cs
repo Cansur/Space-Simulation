@@ -71,6 +71,7 @@ public class GStoneM : MonoBehaviour
     void Start()
     {
         db = GameObject.FindWithTag("DataBase").GetComponent<DB>();
+        StartCoroutine(UpdateC());
     }
     void Update()
     {
@@ -148,5 +149,12 @@ public class GStoneM : MonoBehaviour
     {
         textPricePt.text = string.Format("비용 : " + "<color=#DBD560>" + "{0:#,###}" + " Pt" + "</color>", db.PriceGStone(var));
         textPricePt2.text = string.Format("비용 : " + "<color=#DBD560>" + "{0:#,###}" + " Pt" + "</color>", db.PriceGStone(var));
+    }
+
+    IEnumerator UpdateC()
+    {
+        UpdateText();
+        yield return new WaitForSeconds(0.3f);
+        StartCoroutine(UpdateC());
     }
 }

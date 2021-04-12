@@ -37,7 +37,9 @@ public class RebirthM : MonoBehaviour
         RebirhEasy();
         panelRebirth.SetActive(false);
         db.backGround[2].SetActive(false);
-        db.Pt += (long)(var*(1+var1));
+        if(db.gStone[1] == true) { db.Pt += (long)(var*(1+var1)); }
+        else { db.Pt += (long)var; }
+        
     }
 
     void RebirhEasy()

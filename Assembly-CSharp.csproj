@@ -41,6 +41,7 @@
      <Compile Include="Assets\Script\CameraResolution.cs" />
      <Compile Include="Assets\Script\DataBase\DB.cs" />
      <Compile Include="Assets\Script\DataBase\DValue.cs" />
+     <Compile Include="Assets\Script\DataBase\Save.cs" />
      <Compile Include="Assets\Script\DataBase\Spreadsheet.cs" />
      <Compile Include="Assets\Script\GStoneM.cs" />
      <Compile Include="Assets\Script\MoveButton.cs" />
@@ -50,8 +51,8 @@
      <Compile Include="Assets\Script\Test\TestA.cs" />
      <Compile Include="Assets\Script\TestB.cs" />
      <Compile Include="Assets\Script\TextM.cs" />
-     <Compile Include="Assets\Script\UIM.cs" />
      <Compile Include="Assets\Script\UnlockM.cs" />
+     <None Include="Assets\JsonDotNet\link.xml" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -228,6 +229,9 @@
     </Reference>
     <Reference Include="UnityEditor">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+        <HintPath>C:/Users/USER/Documents/GitHub/Space-Simulation/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.8f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
