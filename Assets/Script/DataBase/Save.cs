@@ -69,7 +69,7 @@ public class Save : MonoBehaviour
     }
     public void JLoad()
     {
-        FileInfo fi = new FileInfo("C:/Users/USER/AppData/LocalLow/DefaultCompany/Space simulation/Bool.txt");
+        FileInfo fi = new FileInfo(Application.persistentDataPath + "/Long.txt");
         if(fi.Exists) 
         { 
             //Debug.Log("있넹");
@@ -90,5 +90,6 @@ public class Save : MonoBehaviour
             for (int i = 0; i < 6; i++) { db.CountProduceAether(i, dataInt["countProduceAether" + i]); }
 
         }
+        else { db.Money = 100; }
     }
 }

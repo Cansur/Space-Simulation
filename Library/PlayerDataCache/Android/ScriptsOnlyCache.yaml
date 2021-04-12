@@ -78,59 +78,59 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11176}
     - Class: 114
-      Script: {instanceID: 11250}
+      Script: {instanceID: 11258}
     - Class: 114
-      Script: {instanceID: 11260}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11270}
+      Script: {instanceID: 11278}
     - Class: 114
-      Script: {instanceID: 11332}
+      Script: {instanceID: 11340}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11476}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 11526}
+      Script: {instanceID: 11534}
     - Class: 114
-      Script: {instanceID: 11698}
+      Script: {instanceID: 11706}
     - Class: 114
-      Script: {instanceID: 12016}
+      Script: {instanceID: 12024}
     - Class: 114
-      Script: {instanceID: 12104}
+      Script: {instanceID: 12112}
     - Class: 114
-      Script: {instanceID: 12190}
+      Script: {instanceID: 12198}
     - Class: 114
-      Script: {instanceID: 12344}
+      Script: {instanceID: 12352}
     - Class: 114
-      Script: {instanceID: 12542}
+      Script: {instanceID: 12550}
     - Class: 114
-      Script: {instanceID: 12580}
+      Script: {instanceID: 12588}
     - Class: 114
-      Script: {instanceID: 12898}
+      Script: {instanceID: 12906}
     - Class: 114
-      Script: {instanceID: 12914}
+      Script: {instanceID: 12922}
     - Class: 114
-      Script: {instanceID: 12938}
+      Script: {instanceID: 12946}
     - Class: 114
-      Script: {instanceID: 13044}
+      Script: {instanceID: 13052}
     - Class: 114
-      Script: {instanceID: 13206}
+      Script: {instanceID: 13164}
     - Class: 114
-      Script: {instanceID: 13364}
+      Script: {instanceID: 13216}
     - Class: 114
-      Script: {instanceID: 13666}
+      Script: {instanceID: 13376}
     - Class: 114
-      Script: {instanceID: 13920}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 14082}
+      Script: {instanceID: 13932}
     - Class: 114
-      Script: {instanceID: 14280}
+      Script: {instanceID: 14094}
     - Class: 114
-      Script: {instanceID: 14358}
+      Script: {instanceID: 14292}
     - Class: 114
-      Script: {instanceID: 18006}
+      Script: {instanceID: 14370}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -165,21 +165,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11176}
     - Class: 114
-      Script: {instanceID: 11276}
+      Script: {instanceID: 11284}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11526}
+      Script: {instanceID: 11534}
     - Class: 114
-      Script: {instanceID: 12190}
+      Script: {instanceID: 12198}
     - Class: 114
-      Script: {instanceID: 12898}
+      Script: {instanceID: 12906}
     - Class: 114
-      Script: {instanceID: 13666}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 14280}
+      Script: {instanceID: 14292}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -547,6 +547,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Save
+  - hash:
+      serializedVersion: 2
       Hash: 71b711096c6c32621c1d4c02310898b7
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
@@ -767,14 +773,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Save
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
   - Assets/Scenes/Test.unity
-  playerPath: C:/Users/USER/Documents/GitHub/Space simulation/Bata 0.8.1.apk
+  playerPath: C:/Users/USER/Documents/GitHub/Space simulation/Bata 0.8.3.apk
